@@ -50,14 +50,16 @@ var checkExist = setInterval(async function () {
             item.innerHTML =
             `<div class='divider'></div> \
                     <div class=''> \
-                        <div align="center"> <button class='primary play-button' style="width:250px"><a href="${lecture}"  download="video.mp4">${text}</a></button> </div> \
+                        <div align="center"> <button class='primary play-button' style="width:250px">${text}</button> </div> \
                     </div> \
                     </div>\
                     <div class='divider'></div> ` + item.innerHTML;
         var play = document.getElementsByClassName("play-button")[0];
-        // play.onclick = () => {
-        //     window.location(lecture)
-        // };
+        play.onclick = () => {
+            if (lecture == null) alert("Can't Download")
+            else
+                window.open(lecture)
+        };
 
         clearInterval(checkExist);
     }
