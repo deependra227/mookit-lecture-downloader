@@ -1,0 +1,15 @@
+{
+  "name": "Mookit lecture Downloader",
+  "version": "1.0",
+  "description": "Mookit lecture Downloader",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": ["https://hello.iitk.ac.in/*"],
+    "js": ["script.js"]
+  }],
+  "manifest_version": 2
+}
